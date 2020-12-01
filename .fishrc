@@ -1,1 +1,28 @@
-/home/sugarfi/.config/fish/config.fish
+# Should be symlinked to ~/.config/fish/config.fish
+source $HOME/.cargo/env
+set -x PATH $PATH /var/lib/flatpak/exports/bin /home/sugarfi/.local/bin /home/sugarfi/crystal-0.35.1-1/bin/ /home/sugarfi/vcpkg
+set -x BAT_THEME gruvbox-light
+
+set -U fish_key_bindings fish_vi_key_bindings
+set -U budspencer_nobell
+
+alias ls exa
+alias cat bat
+alias e vim
+alias v vim
+alias l ls
+alias cl clear
+alias r 'source ~/.fishrc'
+
+alias cr crystal
+alias ca cargo
+
+alias mk mark
+alias umk unmark
+
+alias xi 'sudo xbps-install'
+alias xr 'sudo xbps-remove'
+alias xq 'sudo xbps-query'
+
+alias fi 'sudo flatpak install'
+alias fr 'sudo flatpak uninstall'
