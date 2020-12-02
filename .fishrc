@@ -26,3 +26,5 @@ alias xq 'sudo xbps-query'
 
 alias fi 'sudo flatpak install'
 alias fr 'sudo flatpak uninstall'
+
+alias :q exit
