@@ -1,6 +1,6 @@
 # Should be symlinked to ~/.config/fish/config.fish
-source $HOME/.cargo/env
-set -x PATH $PATH /var/lib/flatpak/exports/bin /home/sugarfi/.local/bin /home/sugarfi/crystal-0.35.1-1/bin/ /home/sugarfi/vcpkg
+#source $HOME/.cargo/env
+set -x PATH $PATH /home/sugarfi/.cargo/bin
 set -x BAT_THEME gruvbox-light
 
 set -U fish_key_bindings fish_vi_key_bindings
@@ -17,14 +17,5 @@ alias r 'source ~/.fishrc'
 alias cr crystal
 alias ca cargo
 
-alias mk mark
-alias umk unmark
-
-alias xi 'sudo xbps-install'
-alias xr 'sudo xbps-remove'
-alias xq 'sudo xbps-query'
-
-alias fi 'sudo flatpak install'
-alias fr 'sudo flatpak uninstall'
-
-alias :q exit
+source ("/nix/store/p03q3wc7ix51jsssfb8r49lwgb3wsnyi-starship-0.44.0/bin/starship" init fish --print-full-init | psub)
+any-nix-shell fish | source
